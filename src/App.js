@@ -21,6 +21,11 @@ function App() {
       })
       }}>Click to add</button>
 
+    <button onClick={()=>{
+      Firebase.firestore().collection('products').doc('V25rpF0bVrkQ1U33DCL1').delete().then(()=>{
+        console.log('Deleted')
+      })
+    }}>Delete</button>
     </div>
   );
 }
