@@ -26,7 +26,14 @@ function App() {
         console.log('Deleted')
       })
     }}>Delete</button>
+
+<button onClick={()=>{
+      Firebase.firestore().collection('products').doc('eXDOeI9W3U6QgvQV7Wbd').set({
+        name : 'updated'
+      })
+    }}>Update</button>
     </div>
+
   );
 }
 
