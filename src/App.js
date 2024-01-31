@@ -14,6 +14,13 @@ function App() {
       })
       }}>Click Me</button>
 
+      <button onClick={()=>{
+      Firebase.firestore().collection('products').add({
+        name : 'MI',  
+        price : 12000
+      })
+      }}>Click to add</button>
+
     </div>
   );
 }
